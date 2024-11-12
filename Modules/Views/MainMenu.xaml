@@ -3,10 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InClassPresTriviaF24.Modules.Views.MainMenu"
              Title="MainMenu">
-    <VerticalStackLayout>
-        <Label 
-            Text="Main Menu"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid ColumnDefinitions="*, *">
+        <Image Source="dotnet_bot.png"/>
+        <BoxView Grid.Column="1" BackgroundColor="Black"/>
+        <VerticalStackLayout Grid.Column="1" BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center"
+                             Spacing="30">
+            <Label Text="Presidential Trivia" FontSize="45" TextColor="Beige" BackgroundColor="Black"
+                   FontFamily="Courier New" FontAttributes="Bold" TextDecorations="Underline"/>
+            <Button Text="~  New Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black" />
+            <Button Text="~  Leaderboard  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black"/>
+            <Button Text="~  Exit Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
