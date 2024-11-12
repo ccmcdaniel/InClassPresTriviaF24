@@ -3,10 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InClassPresTriviaF24.Modules.Views.GamePage"
              Title="GamePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid ColumnDefinitions="150, *, 300">
+        <!-- Grid for Remaining Letters/Quit Game -->
+        <Grid RowDefinitions="150, *, 150" BackgroundColor="Beige" >
+            <Label Text="Remaining Letters" FontAttributes="Bold" FontFamily="Courier New" FontSize="25" HorizontalTextAlignment="Center"
+                   VerticalOptions="End"/>
+            <Label Text="ABCDE..." Grid.Row="1" FontAttributes="Bold" FontFamily="Courier New"
+                   VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Button Text="Quit Game" BackgroundColor="Beige" Grid.Row="2" TextColor="Black" FontAttributes="Bold" FontFamily="Courier New"/>
+        </Grid>
+        
+        <!--Grid for Game Control Panel -->
+        <Grid Grid.Column="1" RowDefinitions="200, *, 150, 100, 200" BackgroundColor="Black">
+            <Label Text="Guess the President" TextColor="Beige" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Presidential Fact" Grid.Row="1" TextColor="Beige"/>
+            <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Guess a Letter: " TextColor="Beige"/>
+                <Entry Placeholder="..." TextColor="Beige"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Submit" Grid.Row="3" BackgroundColor="ForestGreen" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <VerticalStackLayout Grid.Row="4">
+                <Label Text="Lives Remaining" TextColor="Beige" HorizontalOptions="Center"/>
+                <HorizontalStackLayout/>
+            </VerticalStackLayout>
+        </Grid>
+
+        <!--Grid for Portrait/Correct Answer-->
+        <Grid Grid.Column="2" RowDefinitions="*, 200" BackgroundColor="Beige">
+            <Image Source="dotnet_bot.png"/>
+            <Label Text="_  _  _  _  _" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </Grid>
+    </Grid>
 </ContentPage>
