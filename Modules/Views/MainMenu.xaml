@@ -11,9 +11,9 @@
                              Spacing="30">
             <Label Text="Presidential Trivia" FontSize="45" TextColor="Beige" BackgroundColor="Black"
                    FontFamily="Courier New" FontAttributes="Bold" TextDecorations="Underline"/>
-            <Button Text="~  New Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black" />
-            <Button Text="~  Leaderboard  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black"/>
-            <Button Text="~  Exit Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black"/>
+            <Button Text="~  New Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black" Clicked="NewGameClicked"/>
+            <Button Text="~  Leaderboard  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black" Clicked="LeaderboardsClicked"/>
+            <Button Text="~  Exit Game  ~" FontSize="25" TextColor="Beige" BackgroundColor="Black" Clicked="ExitGameClicked"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
